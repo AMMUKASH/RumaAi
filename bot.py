@@ -52,7 +52,7 @@ if __name__ == '__main__':
     Thread(target=run_flask).start()
     
     # --- APNA TELEGRAM BOT TOKEN ---
-    TOKEN = "81517096826:AAGTHR1T0vB2Y1_T9X40y_AY8wwQPQZ1HJ0" 
+    TOKEN = "8517096826:AAGfHRlT0vB2Y1_T9X40y_AY8wwQPGZ1HJ8" 
     
     app_bot = ApplicationBuilder().token(TOKEN).build()
     app_bot.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), ai_chat))
