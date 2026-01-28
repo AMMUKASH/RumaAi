@@ -7,7 +7,7 @@ from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTyp
 
 # 1. Gemini AI Setup
 # Yahan apni NAYI API Key dhyan se check karke daalo
-GEMINI_KEY = "YAHAN_APNI_NAYI_KEY_DAALO"
+GEMINI_KEY = "AIzaSyC9btAe3O6RjUkMbffSra1MJ1-eE8OEC9c"
 genai.configure(api_key=GEMINI_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
@@ -31,7 +31,7 @@ async def ai_chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 if __name__ == '__main__':
     Thread(target=run_flask).start()
-    TOKEN = "8517096826:AAGfHRlT0vB2Y1_T9X40y_AY8wwQPGZ1HJ8" 
+    TOKEN = "8517096826:AAFqDuzx2AwCZvMZ2on6stRDAdcot2UYBTM" 
     app_bot = ApplicationBuilder().token(TOKEN).build()
     app_bot.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), ai_chat))
     app_bot.run_polling()
